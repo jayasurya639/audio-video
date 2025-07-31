@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Media Tags</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎧 HTML Media Tags</h1>
+      <p>Explore &lt;audio&gt; and &lt;video&gt; with examples and syntax</p>
+      <div class="tabs">
+        <button onclick="showTab('audio')">Audio</button>
+        <button onclick="showTab('video')">Video</button>
+      </div>
+    </header>
+
+    <section id="audio" class="tab-content show">
+  <h2>🎵 Audio Tag</h2>
+  <p>The <code>&lt;audio&gt;</code> tag is used to embed sound content in HTML pages.</p>
+
+  <p><strong>📅 Introduced:</strong> HTML5 (released in 2008, finalized in 2014)</p>
+  <p><strong>🎯 Purpose:</strong> Before HTML5, embedding audio required third-party plugins like Flash. The <code>&lt;audio&gt;</code> tag was introduced to offer a native, standardized way to play audio directly in web browsers without extra software.</p>
+
+  <audio controls>
+    <source src="audio.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <h3>Syntax:</h3>
+  <pre><code>&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mp3"&gt;
+  Your browser does not support the audio tag.
+&lt;/audio&gt;</code></pre>
+</section>
+
+<section id="video" class="tab-content">
+  <h2>🎥 Video Tag</h2>
+  <p>The <code>&lt;video&gt;</code> tag is used to embed video files into a web page.</p>
+
+  <p><strong>📅 Introduced:</strong> HTML5 (released in 2008, finalized in 2014)</p>
+  <p><strong>🎯 Purpose:</strong> Before HTML5, videos were embedded using plugins like Flash or QuickTime. The <code>&lt;video&gt;</code> tag allows browsers to natively play videos with standardized controls and formats.</p>
+
+  <video controls width="480">
+    <source src="video.mp4" type="video/mp4" />
+    Your browser does not support the video element.
+  </video>
+
+  <h3>Syntax:</h3>
+  <pre><code>&lt;video controls width="480"&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;</code></pre>
+</section>
+
+
+    <footer>
+      <p>Presented by Surya🪽</p>
+    </footer>
+  </div>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll(".tab-content").forEach((el) => el.classList.remove("show"));
+      document.getElementById(id).classList.add("show");
+    }
+  </script>
+</body>
+</html>
